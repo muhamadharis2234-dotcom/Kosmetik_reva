@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   RESET DAN DASAR
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f5;
+    color: #573448;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   CONTAINER UTAMA
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fffafd;
+    overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: linear-gradient(135deg, #d94f80, #ef8eaf);
+    color: white;
+    padding: 23px 30px;
+    box-shadow: 0 3px 12px rgba(180, 63, 108, 0.12);
+}
+
+.header h1 {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   LAYOUT UTAMA
+========================= */
+
+.main {
+    display: flex;
+    min-height: calc(100vh - 85px);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: #fff5f8;
+    padding: 20px 15px;
+    border-right: 1px solid #f5d5e1;
+}
+
+/* =========================
+   KOTAK SAMBUTAN SIDEBAR
+========================= */
+
+.welcome {
+    background: linear-gradient(135deg, #ffe0eb, #f9c5d8);
+    padding: 20px 12px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+    border: 1px solid #f5c2d5;
+}
+
+.welcome h3 {
+    color: #a93765;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.welcome p {
+    color: #92516d;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* =========================
+   MENU SIDEBAR
+========================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.menu-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #b27b91;
+    letter-spacing: 2px;
+    padding: 0 12px;
+    margin-bottom: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    text-decoration: none;
+    color: #795064;
+    background: transparent;
+    border-radius: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border-left: 4px solid transparent;
+}
+
+.menu a .icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffe4ed;
+    border-radius: 10px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.menu a:hover {
+    background: #ffe4ed;
+    color: #c4386c;
+    transform: translateX(4px);
+}
+
+.menu a.active {
+    background: linear-gradient(135deg, #d94f80, #ed85a7);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(217, 79, 128, 0.2);
+    border-left-color: #a82b59;
+}
+
+.menu a.active .icon {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.menu a .arrow {
+    margin-left: auto;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+/* =========================
+   KONTEN KANAN
+========================= */
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    background: #fffafd;
+    overflow-x: auto;
+}
+
+/* =========================
+   JUDUL
+========================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    color: #c04473;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: #a83f68;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   DASHBOARD INFORMASI UTAMA
+========================= */
+
+.dashboard {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.welcome-box {
+    background: linear-gradient(135deg, #e75480, #f5a0bd);
+    color: white;
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 5px 15px rgba(231, 84, 128, 0.2);
+}
+
+.welcome-box h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.welcome-box p {
+    font-size: 13px;
+    margin-bottom: 5px;
+    line-height: 1.8;
+}
+
+.dashboard-title {
+    color: #71364d;
+    margin: 25px 0 18px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* =========================
+   KARTU INFORMASI
+========================= */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.info-card {
+    background: white;
+    padding: 22px 18px;
+    border-radius: 14px;
+    border: 1px solid #f4d3df;
+    box-shadow: 0 4px 12px rgba(120, 50, 80, 0.07);
+    transition: all 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(120, 50, 80, 0.13);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fde5ee;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.info-card h3 {
+    font-size: 14px;
+    color: #916276;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d94f80;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    font-size: 11px;
+    color: #9b8490;
+}
+
+/* =========================
+   MENU PINTASAN
+========================= */
+
+.shortcut-box {
+    margin-top: 28px;
+    background: #fff0f5;
+    border: 1px solid #f4d3df;
+    border-radius: 14px;
+    padding: 23px;
+}
+
+.shortcut-box h3 {
+    margin-bottom: 10px;
+    color: #a83f68;
+}
+
+.shortcut-box p {
+    color: #795467;
+}
+
+.shortcut-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.shortcut-menu a {
+    display: inline-block;
+    padding: 11px 16px;
+    background: #d94f80;
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.shortcut-menu a:hover {
+    background: #b93667;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.dashboard-footer {
+    text-align: center;
+    color: #b08b9b;
+    font-size: 11px;
+    margin-top: 28px;
+    padding: 15px;
+}
+
+/* =========================
+   TABEL DATA
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+th {
+    background: #d85b87;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+}
+
+th,
+td {
+    border: 1px solid #f0d3df;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+td {
+    color: #68475a;
+    font-weight: 400;
+}
+
+tr:nth-child(even) {
+    background: #fff3f7;
+}
+
+tr:hover {
+    background: #ffedf3;
+}
+
+/* =========================
+   FORM INPUT
+========================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #e8bfd0;
+    border-radius: 8px;
+    background: white;
+    color: #573448;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d94f80;
+    box-shadow: 0 0 0 3px rgba(217, 79, 128, 0.1);
+}
+
+label {
+    display: inline-block;
+    color: #795064;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* =========================
+   TOMBOL DAN LINK
+========================= */
+
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #d85b87;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: #b93f6b;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   TOMBOL EDIT DAN HAPUS
+========================= */
+
+.btn-edit {
+    display: inline-block;
+    background: #e9a23b;
+    color: white;
+    padding: 7px 11px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.btn-edit:hover {
+    background: #c98420;
+}
+
+.btn-hapus {
+    display: inline-block;
+    background: #dc4f72;
+    color: white;
+    padding: 7px 11px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.btn-hapus:hover {
+    background: #b92e51;
+}
+
+/* =========================
+   GARIS PEMBATAS
+========================= */
+
+hr {
+    border: none;
+    border-top: 1px solid #f1d6e0;
+    margin: 18px 0;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 230px;
+    }
+
+    .conteudo {
+        padding: 22px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #f5d5e1;
+    }
+
+    .conteudo {
+        padding: 18px;
+    }
+
+    .header {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-box {
+        padding: 22px;
+    }
+
+    .welcome-box h2 {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
